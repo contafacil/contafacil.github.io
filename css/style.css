@@ -3952,14 +3952,17 @@ a  {
     .home .navbar-default .navbar-nav>li>a  {
     font-size: 18px;
     padding: 25px }
- }.home .main  {
+ }
+ .home .main  {
     color: white;
     font-size: 24px;
     line-height: 1.1;
     padding: 0px 20px 0;
     margin-bottom: 50px;
     text-align: center;
-    font-family: 'Open Sans Condensed',  sans-serif }
+    font-family: 'Open Sans Condensed',  sans-serif
+}
+
 @media (min-width: 992px)  {
     .home .main  {
     font-size: 48px;
