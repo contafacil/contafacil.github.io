@@ -21,7 +21,7 @@
 
     ga('create', 'UA-53009326-1', 'auto');
     ga('send', 'pageview');
-  </script> 
+  </script>
 
 </head>
 <body>
@@ -55,9 +55,9 @@
       </h3>
     </div>
 
-<!-- Begin MailChimp Signup Form -->
+    <!-- Begin Signup Form -->
     <div id="mc_embed_signup" class="action">
-      <form action="http://blogspot.us4.list-manage.com/subscribe/post?u=1e0271a36525cb216a895d39d&amp;id=f006b29aec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline centered" target="_blank" novalidate>
+      <form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline centered" target="_blank" novalidate>
         <div id="mce-responses" class="clear">
           <div class="response" id="mce-error-response" style="display:none"></div>
           <div class="response" id="mce-success-response" style="display:none"></div>
@@ -65,13 +65,12 @@
         <ul>
           <li>
             <div class="mc-field-group form-group">
-              <input type="text" value="" name="NAME" class="required form-control input-lg" id="mce-NAME" placeholder="Nombre *">
+              <input type="text" value="" name="NAME" class="required form-control input-lg" id="name" placeholder="Nombre *">
             </div>
           </li>
-
           <li>
             <div class="mc-field-group form-group">
-              <input type="email" value="" name="EMAIL" class="required email form-control input-lg" id="mce-EMAIL" placeholder="Email *">
+              <input type="email" value="" name="EMAIL" class="required email form-control input-lg" id="email" placeholder="Email *">
             </div>
           </li>
 
@@ -86,12 +85,35 @@
           <input type="text" name="b_1e0271a36525cb216a895d39d_f006b29aec" tabindex="-1" value="">
         </div>
         <div class="clear">
-          <input type="submit" value="¡Quiero saber más!" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-info btn-lg">
+          <input type="submit" value="¡Quiero saber más!" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
         </div>
+
+
+   <!-- Modal
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    End Modal -->
+
+
       </form>
     </div>
 
-<!--End mc_embed_signup-->
+    <!--End signup form-->
 
   </div>
 
@@ -138,5 +160,8 @@
     </div>
   </section>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
