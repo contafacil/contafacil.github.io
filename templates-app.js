@@ -78,7 +78,7 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
     "            <div class=\"col-xs-6 text-right\">\n" +
     "              <ul class=\"nav navbar-nav navbar-right\">\n" +
     "                <li>\n" +
-    "                  <a class=\"navbar-link\"><i class=\"fa fa-plus\"></i> Transacción</a>\n" +
+    "                  <a cf-create-transaction class=\"navbar-link\"><i class=\"fa fa-plus\"></i> Transacción</a>\n" +
     "                </li>\n" +
     "                <li>\n" +
     "                  <a href=\"/#/pyme-dashboard\" class=\"navbar-link\">Pymes</a>\n" +
@@ -323,7 +323,7 @@ angular.module("pymeDashboard/pymeDashboard.tpl.html", []).run(["$templateCache"
     "            <div class=\"col-xs-6 text-right\">\n" +
     "              <ul class=\"nav navbar-nav navbar-right\">\n" +
     "                <li>\n" +
-    "                  <a class=\"navbar-link\"><i class=\"fa fa-plus\"></i> Transacción</a>\n" +
+    "                  <a cf-create-transaction class=\"navbar-link\"><i class=\"fa fa-plus\"></i> Transacción</a>\n" +
     "                </li>\n" +
     "                <li>\n" +
     "                  <a class=\"navbar-link active\" style=\"border-radius: 10px;\n" +

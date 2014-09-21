@@ -41,7 +41,7 @@ angular.module( 'cf')
         var deferred = $q.defer();
 
         transaction.id = transactions.length;
-        transactions.push(transaction);
+        transactions = [transaction].concat(transactions);
 
         deferred.resolve(transaction);
 

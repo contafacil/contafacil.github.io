@@ -37,4 +37,31 @@ angular.module('cf.utils.directives',[])
       }
     };
   }
-]);
+])
+.directive('cfCreateTransaction',[
+  '$rootScope','transactionsService','$modal',
+  function($rootScope,transactionsService,$modal) {
+    return {
+      link: function(scope, element, attrs) {
+        element.on('click', function() {
+          $modal.open({
+            templateUrl: 'utils/transactionCreationForm.tpl.html',
+            size: 'md',
+            controller: [
+              '$rootScope','$scope','transactionsService',
+              function($rootScope,$scope) {
+                $scope.createTransaction = function() {
+                  transactionsService.create({id:2, transactionType:'INCOME', amount:15000, description: 'Startup Weekend',companyId:1, pending: true, date: new Date().toISOString()});
+                  $scope.$close();
+                  $rootScope.$emit('filterChange:transactions',{filterState:{}});
+                };
+
+              }
+            ]
+          });
+        });
+      }
+    };
+  }
+])
+;
