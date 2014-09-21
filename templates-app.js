@@ -1,4 +1,4 @@
-angular.module('templates-app', ['dashboard/accountRecordsCreationForm.tpl.html', 'dashboard/dashboard.tpl.html', 'landing/landing.tpl.html', 'signup/accountCreationForm.tpl.html', 'signup/initialBalance.tpl.html', 'signup/signup.tpl.html']);
+angular.module('templates-app', ['dashboard/accountRecordsCreationForm.tpl.html', 'dashboard/dashboard.tpl.html', 'landing/landing.tpl.html', 'pymeDashboard/pymeDashboard.tpl.html', 'signup/accountCreationForm.tpl.html', 'signup/initialBalance.tpl.html', 'signup/signup.tpl.html']);
 
 angular.module("dashboard/accountRecordsCreationForm.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("dashboard/accountRecordsCreationForm.tpl.html",
@@ -78,15 +78,19 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
     "            <div class=\"col-xs-6 text-right\">\n" +
     "              <ul class=\"nav navbar-nav navbar-right\">\n" +
     "                <li>\n" +
+    "                  <a class=\"navbar-link\"><i class=\"fa fa-plus\"></i> Transacción</a>\n" +
+    "                </li>\n" +
+    "                <li>\n" +
+    "                  <a href=\"/#/pyme-dashboard\" class=\"navbar-link\">Pymes</a>\n" +
+    "                </li>\n" +
+    "                <li>\n" +
     "                  <a class=\"navbar-link active\" style=\"border-radius: 10px;\n" +
     "border-style: solid;\n" +
-    "border-color: white;\">Registros Contable</a>\n" +
+    "border-color: white;\">Registros Contables</a>\n" +
     "                </li>\n" +
+    "\n" +
     "                <li>\n" +
     "                  <a class=\"navbar-link\">Reportes</a>\n" +
-    "                </li>\n" +
-    "                <li>\n" +
-    "                  <a class=\"navbar-link\">Applicando</a>\n" +
     "                </li>\n" +
     "              </ul>\n" +
     "            </div>\n" +
@@ -104,8 +108,8 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
     "          </span>\n" +
     "      </form>\n" +
     "      <div class=\"filter-box\" cf-filter filter-name=\"pending\" list-to-filter=\"transactions\" filters=\"['pending','done']\">\n" +
-    "        <h3>Estado transacción</h3>\n" +
-    "        <p>Selecciona para filtrar</p>\n" +
+    "        <h3 style=\"color:white;\">Estado transacción</h3>\n" +
+    "        <p style=\"color:whitesmoke;\">Selecciona para filtrar</p>\n" +
     "        <ul class=\"list-group\">\n" +
     "          <li cf-filter-item class=\"list-group-item\" cf-filter-item filter-name=\"done\" filter-parent=\"pending\">\n" +
     "            Hecho\n" +
@@ -143,8 +147,7 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
 
 angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("landing/landing.tpl.html",
-    "<div>\n" +
-    "  <div class=\"main\" ng-controller=\"LandingCtrl\">\n" +
+    "<div class=\"main\" ng-controller=\"LandingCtrl\">\n" +
     "    <header>\n" +
     "      <nav class=\"navbar\" role=\"navigation\">\n" +
     "        <div class=\"container\">\n" +
@@ -302,6 +305,58 @@ angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($
     "");
 }]);
 
+angular.module("pymeDashboard/pymeDashboard.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("pymeDashboard/pymeDashboard.tpl.html",
+    "<div class=\"wrapper\" style=\"background-image: url('/assets/images/home.png');\n" +
+    "background-size: cover;\n" +
+    "background-repeat: no-repeat;height:800px;\">\n" +
+    "<header style=\"height:110px;\">\n" +
+    "<nav class=\"navbar\" role=\"navigation\">\n" +
+    "        <div class=\"container\">\n" +
+    "          <div class=\"row\">\n" +
+    "            <div class=\"col-xs-6\">\n" +
+    "            <img src=\"/assets/images/logo-transparante.png\" alt=\"\" class=\"img-responsive pull-left\" style=\"width: 60px;\">\n" +
+    "              <h4 class=\"brand\">\n" +
+    "              Conta<strong>fácil</strong>\n" +
+    "              <h4>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-xs-6 text-right\">\n" +
+    "              <ul class=\"nav navbar-nav navbar-right\">\n" +
+    "                <li>\n" +
+    "                  <a class=\"navbar-link\"><i class=\"fa fa-plus\"></i> Transacción</a>\n" +
+    "                </li>\n" +
+    "                <li>\n" +
+    "                  <a class=\"navbar-link active\" style=\"border-radius: 10px;\n" +
+    "border-style: solid;\n" +
+    "border-color: white;\">Pymes</a>\n" +
+    "                </li>\n" +
+    "                <li>\n" +
+    "                  <a href=\"/#/dashboard\" class=\"navbar-link\">Registros Contables</a>\n" +
+    "                </li>\n" +
+    "                <li>\n" +
+    "                  <a class=\"navbar-link\">Reportes</a>\n" +
+    "                </li>\n" +
+    "              </ul>\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </nav>\n" +
+    "</header>\n" +
+    "\n" +
+    "<div class=\"container\">\n" +
+    "\n" +
+    "  <div class=\"row\">\n" +
+    "        <div class=\"col-md-8\">\n" +
+    "          <img src=\"/assets/images/reportemensual.png\" class=\"img-responsive\" alt=\"\" style=\"margin-top: -40px; margin-bottom: 50px\">\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "          <img src=\"/assets/images/sidebar.png\" class=\"img-responsive\" alt=\"\" style=\"margin-top: -40px;\">\n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "</div>\n" +
+    "</div>");
+}]);
+
 angular.module("signup/accountCreationForm.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("signup/accountCreationForm.tpl.html",
     "  <div ng-controller=\"AccountCreationCtrl\">\n" +
@@ -350,8 +405,8 @@ angular.module("signup/initialBalance.tpl.html", []).run(["$templateCache", func
   $templateCache.put("signup/initialBalance.tpl.html",
     "<div class=\"wrapper\" style=\"background-image: url('/assets/images/home.png');\n" +
     "background-size: cover;\n" +
-    "background-repeat: no-repeat;\">\n" +
-    "<nav class=\"navbar\" role=\"navigation\">\n" +
+    "background-repeat: no-repeat; height:800px;\">\n" +
+    "<nav class=\"navbar\" role=\"navigation\" style=\"margin-bottom:0px;\">\n" +
     "        <div class=\"container\">\n" +
     "          <div class=\"row\">\n" +
     "            <div class=\"col-xs-6\">\n" +
@@ -375,16 +430,16 @@ angular.module("signup/initialBalance.tpl.html", []).run(["$templateCache", func
     "      </nav>\n" +
     "\n" +
     "<div class=\"container\" ng-controller=\"InitialBalanceCtrl\">\n" +
-    "  <div class=\"container\" style=\"margin-top: 20px;\">\n" +
+    "  <div class=\"container\">\n" +
     "    <div class=\"row row-centered registry-step-header\">\n" +
     "      <div class=\"col-xs-12 text-left col-centered\">\n" +
-    "        <h2 class=\"registry-title\">\n" +
+    "        <h2 class=\"registry-title\" style=\"color:white;\">\n" +
     "          Paso 2 de 2: Crea tus cuentas\n" +
     "        </h2>\n" +
     "      </div>\n" +
     "    </div>\n" +
     "    <!-- END registry-step-header -->\n" +
-    "    <div class=\"row row-centered\" style=\"background-color:white;border-radius:5px;padding-top:10px;\">\n" +
+    "    <div class=\"row row-centered\" style=\"background-color:white;border-radius:5px;padding-top:10px;padding-bottom:10px;\">\n" +
     "      <div class=\"col-xs-12 col-centered\">\n" +
     "        <tabset id=\"accounts-registry-tab-content\" class=\"tab-content\">\n" +
     "          <button class=\"btn btn-default btn-info\" ng-click=\"openAccountForm()\"><i class=\"fa fa-plus\"></i>\n" +

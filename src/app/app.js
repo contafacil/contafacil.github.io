@@ -4,6 +4,7 @@ angular.module( 'cf', [
   'cf.signup',
   'cf.dashboard',
   'cf.landing',
+  'cf.pymeDashboard',
   'ui.router',
   'ui.bootstrap',
   'ui.event',
